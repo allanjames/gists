@@ -1,0 +1,18 @@
+const j = ['a','b'];
+const s = ['a','a','T','k','L','b','C','z','x','a'];
+
+var obj = {};
+
+j.forEach((i)=>{
+  obj[i] = 0;
+});
+
+var count = 0;
+j.forEach((jewel)=>{
+  s.forEach((stone)=>{
+    if(jewel == stone){
+      obj[jewel]++;
+    }
+  })
+})
+console.log(obj)
