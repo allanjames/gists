@@ -3,11 +3,12 @@ const s = ['a','a','T','k','L','b','C','z','x','a'];
 
 var obj = {};
 
+//intialize object to store # of occurrences of array j elements found in array s.
 j.forEach((i)=>{
   obj[i] = 0;
 });
 
-var count = 0;
+//nested for loops on both arrays
 j.forEach((jewel)=>{
   s.forEach((stone)=>{
     if(jewel == stone){
