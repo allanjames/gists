@@ -17,16 +17,16 @@ function nested(){
       }
     })
   })
-  console.log(obj)
+  return obj;
 }
 
 //run filter function on haystack array using each value from array j (this is likely more efficient)
 function filtered(){ 
   j.forEach((jewel)=>{
-    obj[jewel] = s.filter(item=> item == jewel);
+    let arr = s.filter(item=> item == jewel);
+    obj[jewel] = arr.length;
   });
-  console.log(obj);
+  return obj;
 }
-nested();
-filtered();
-
+console.log(nested());
+console.log(filtered());
