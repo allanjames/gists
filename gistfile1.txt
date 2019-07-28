@@ -9,11 +9,24 @@ j.forEach((i)=>{
 });
 
 //nested for loops on both arrays
-j.forEach((jewel)=>{
-  s.forEach((stone)=>{
-    if(jewel == stone){
-      obj[jewel]++;
-    }
+function nested(){
+  j.forEach((jewel)=>{
+    s.forEach((stone)=>{
+      if(jewel == stone){
+        obj[jewel]++;
+      }
+    })
   })
-})
-console.log(obj)
+  console.log(obj)
+}
+
+//run filter function on haystack array using each value from array j (this is likely more efficient)
+function filtered(){ 
+  j.forEach((jewel)=>{
+    obj[jewel] = s.filter(item=> item == jewel);
+  });
+  console.log(obj);
+}
+nested();
+filtered();
+
